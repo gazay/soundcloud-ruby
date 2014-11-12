@@ -124,6 +124,8 @@ module SoundCloud
           :redirect_uri => @options[:redirect_uri],
           :code => @options[:code],
         }
+      else
+        {}
       end
       params.merge!(client_params)
       response = handle_response(false) {
